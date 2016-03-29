@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="dataSourceStorageLocal">
+    <data-source name="MySQL - areYouTalkingToMe@localhost" uuid="529adb93-411e-463a-9664-90f25663c836">
+      <secret-storage>master_key</secret-storage>
+      <user-name>root</user-name>
+      <schema-pattern>areyoutalkingtome.*</schema-pattern>
+      <default-schemas>areyoutalkingtome.*</default-schemas>
+    </data-source>
+  </component>
+</project>
