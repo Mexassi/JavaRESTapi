@@ -7,6 +7,8 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.HashMap;
+import java.util.Map;
+import java.util.TreeMap;
 
 /**
  * Created by Massimo on 30/03/2016.
@@ -38,8 +40,8 @@ public class HealthController {
     MessageService messageService;
 
     @RequestMapping(value = "/health", method = RequestMethod.GET)
-    public HashMap<String, String> getHealth() {
-        HashMap<String, String> results = new HashMap<String, String>();
+    public Map<String, String> getHealth() {
+        Map<String, String> result = new HashMap<String, String>();
         for (Endpoint endpoint : Endpoint.values()) {
             String response;
             try {
@@ -47,10 +49,10 @@ public class HealthController {
             } catch (Exception e) {
                 response = e.getMessage();
             }
-            results.put(endpoint.getName(), response);
+            result.put(endpoint.getName(), response);
         }
 
-        return results;
+        return result;
     }
 
 }

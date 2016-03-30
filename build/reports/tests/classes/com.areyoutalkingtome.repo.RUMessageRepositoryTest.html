@@ -41,7 +41,7 @@
 </td>
 <td>
 <div class="infoBox" id="duration">
-<div class="counter">0.032s</div>
+<div class="counter">0.023s</div>
 <p>duration</p>
 </div>
 </td>
@@ -79,7 +79,7 @@
 </thead>
 <tr>
 <td class="success">testSaveWithReceiver</td>
-<td>0.032s</td>
+<td>0.023s</td>
 <td class="success">passed</td>
 </tr>
 </table>
@@ -87,13 +87,13 @@
 <div id="tab1" class="tab">
 <h2>Standard output</h2>
 <span class="code">
-<pre>2016-03-31 08:40:04.448  INFO 1723 --- [    Test worker] o.s.t.c.support.AbstractContextLoader    : Could not detect default resource locations for test class [com.areyoutalkingtome.repo.RUMessageRepositoryTest]: no resource found for suffixes {-context.xml, Context.groovy}.
-2016-03-31 08:40:04.453  INFO 1723 --- [    Test worker] o.s.t.c.web.WebTestContextBootstrapper   : Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
-2016-03-31 08:40:04.453  INFO 1723 --- [    Test worker] o.s.t.c.web.WebTestContextBootstrapper   : Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@c86aa15, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@2d89e34, org.springframework.test.context.support.DependencyInjectionTestExecutionListener@406ccde, org.springframework.test.context.support.DirtiesContextTestExecutionListener@506eb897, org.springframework.test.context.transaction.TransactionalTestExecutionListener@6901668d, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@2f6e6ca7]
-2016-03-31 08:40:04.500  INFO 1723 --- [    Test worker] o.s.t.c.transaction.TransactionContext   : Began transaction (1) for test context [DefaultTestContext@38338c88 testClass = RUMessageRepositoryTest, testInstance = com.areyoutalkingtome.repo.RUMessageRepositoryTest@5ae4b00d, testMethod = testSaveWithReceiver@RUMessageRepositoryTest, testException = [null], mergedContextConfiguration = [WebMergedContextConfiguration@1dbc25a8 testClass = RUMessageRepositoryTest, locations = '{}', classes = '{class com.areyoutalkingtome.AreYouTalkingToMeApplication}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{}', resourceBasePath = 'src/main/webapp', contextLoader = 'org.springframework.boot.test.SpringApplicationContextLoader', parent = [null]]]; transaction manager [org.springframework.orm.jpa.JpaTransactionManager@11fa74f3]; rollback [true]
+<pre>2016-03-31 09:02:46.859  INFO 2185 --- [    Test worker] o.s.t.c.support.AbstractContextLoader    : Could not detect default resource locations for test class [com.areyoutalkingtome.repo.RUMessageRepositoryTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+2016-03-31 09:02:46.864  INFO 2185 --- [    Test worker] o.s.t.c.web.WebTestContextBootstrapper   : Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+2016-03-31 09:02:46.864  INFO 2185 --- [    Test worker] o.s.t.c.web.WebTestContextBootstrapper   : Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@16f837b2, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@d6f73b1, org.springframework.test.context.support.DependencyInjectionTestExecutionListener@2a70444a, org.springframework.test.context.support.DirtiesContextTestExecutionListener@7b747fd4, org.springframework.test.context.transaction.TransactionalTestExecutionListener@2c6682af, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@5a629e69]
+2016-03-31 09:02:46.882  INFO 2185 --- [    Test worker] o.s.t.c.transaction.TransactionContext   : Began transaction (1) for test context [DefaultTestContext@2aca8833 testClass = RUMessageRepositoryTest, testInstance = com.areyoutalkingtome.repo.RUMessageRepositoryTest@3221043f, testMethod = testSaveWithReceiver@RUMessageRepositoryTest, testException = [null], mergedContextConfiguration = [WebMergedContextConfiguration@7218d37b testClass = RUMessageRepositoryTest, locations = '{}', classes = '{class com.areyoutalkingtome.AreYouTalkingToMeApplication}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{}', resourceBasePath = 'src/main/webapp', contextLoader = 'org.springframework.boot.test.SpringApplicationContextLoader', parent = [null]]]; transaction manager [org.springframework.orm.jpa.JpaTransactionManager@7ab26b35]; rollback [true]
 Hibernate: insert into rumessage (body, origin, time_sent) values (?, ?, ?)
 Hibernate: insert into rureceiver (message_id, name, time) values (?, ?, ?)
-2016-03-31 08:40:04.524  INFO 1723 --- [    Test worker] o.s.t.c.transaction.TransactionContext   : Rolled back transaction for test context [DefaultTestContext@38338c88 testClass = RUMessageRepositoryTest, testInstance = com.areyoutalkingtome.repo.RUMessageRepositoryTest@5ae4b00d, testMethod = testSaveWithReceiver@RUMessageRepositoryTest, testException = [null], mergedContextConfiguration = [WebMergedContextConfiguration@1dbc25a8 testClass = RUMessageRepositoryTest, locations = '{}', classes = '{class com.areyoutalkingtome.AreYouTalkingToMeApplication}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{}', resourceBasePath = 'src/main/webapp', contextLoader = 'org.springframework.boot.test.SpringApplicationContextLoader', parent = [null]]].
+2016-03-31 09:02:46.904  INFO 2185 --- [    Test worker] o.s.t.c.transaction.TransactionContext   : Rolled back transaction for test context [DefaultTestContext@2aca8833 testClass = RUMessageRepositoryTest, testInstance = com.areyoutalkingtome.repo.RUMessageRepositoryTest@3221043f, testMethod = testSaveWithReceiver@RUMessageRepositoryTest, testException = [null], mergedContextConfiguration = [WebMergedContextConfiguration@7218d37b testClass = RUMessageRepositoryTest, locations = '{}', classes = '{class com.areyoutalkingtome.AreYouTalkingToMeApplication}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{}', resourceBasePath = 'src/main/webapp', contextLoader = 'org.springframework.boot.test.SpringApplicationContextLoader', parent = [null]]].
 </pre>
 </span>
 </div>
@@ -105,7 +105,7 @@ Hibernate: insert into rureceiver (message_id, name, time) values (?, ?, ?)
 <input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
 </label>
 </div>Generated by 
-<a href="http://www.gradle.org">Gradle 2.9</a> at Mar 31, 2016 8:40:04 AM</p>
+<a href="http://www.gradle.org">Gradle 2.9</a> at Mar 31, 2016 9:02:47 AM</p>
 </div>
 </div>
 </body>

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.areyoutalkingtome.client.RESTClientTest" tests="1" skipped="1" failures="0" errors="0" timestamp="2016-03-30T21:38:48" hostname="awesome" time="0.006">
+<testsuite name="com.areyoutalkingtome.client.RESTClientTest" tests="1" skipped="1" failures="0" errors="0" timestamp="2016-03-30T22:01:30" hostname="awesome" time="0.0">
   <properties/>
-  <testcase name="sendMessage" classname="com.areyoutalkingtome.client.RESTClientTest" time="0.006">
+  <testcase name="sendMessage" classname="com.areyoutalkingtome.client.RESTClientTest" time="0.0">
     <skipped/>
   </testcase>
   <system-out><![CDATA[]]></system-out>
