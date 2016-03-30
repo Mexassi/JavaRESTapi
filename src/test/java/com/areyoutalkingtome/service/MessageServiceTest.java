@@ -53,4 +53,9 @@ public class MessageServiceTest {
         assertThat("receiver should be set", newMessage.getReceivers().size(), equalTo(1));
     }
 
+    @Test
+    public void sendMessages() {
+
+    }
+
 }

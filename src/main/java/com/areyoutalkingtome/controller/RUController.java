@@ -1,5 +1,6 @@
 package com.areyoutalkingtome.controller;
 
+import com.areyoutalkingtome.client.RESTClient;
 import com.areyoutalkingtome.model.RUMessage;
 import com.areyoutalkingtome.service.MessageService;
 import org.springframework.beans.factory.annotation.Autowired;

@@ -1,19 +1,30 @@
 package com.areyoutalkingtome.client;
 
-import com.areyoutalkingtome.AreYouTalkingToMeApplication;
-import org.junit.runner.RunWith;
-import org.springframework.boot.test.SpringApplicationConfiguration;
-import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
-import org.springframework.test.context.web.WebAppConfiguration;
-import org.springframework.transaction.annotation.Transactional;
+import com.areyoutalkingtome.model.RUMessage;
+import com.areyoutalkingtome.service.MessageService;
+import org.junit.Before;
+import org.junit.Ignore;
+import org.junit.Test;
 
-/**
- * Created by Massimo on 30/03/2016.
- */
-@RunWith(SpringJUnit4ClassRunner.class)
-@SpringApplicationConfiguration(classes = AreYouTalkingToMeApplication.class)
-@WebAppConfiguration
-@Transactional
-public class RESTCLientTest {
+import static org.hamcrest.Matchers.equalTo;
+import static org.junit.Assert.assertThat;
+
+public class RESTClientTest {
+
+    RESTClient messageClient;
+
+    @Before
+    public void setUp() throws Exception {
+        messageClient = new RESTClient();
+        messageClient.setSendToAddress("localhost");
+    }
+
+    @Ignore
+    @Test
+    public void sendMessage() {
+
+        messageClient.sendMessage(new RUMessage("me", "blah blha"));
+
+    }
 
 }

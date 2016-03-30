@@ -1,14 +1,17 @@
 package com.areyoutalkingtome.service;
 
+import com.areyoutalkingtome.client.RESTClient;
 import com.areyoutalkingtome.model.RUMessage;
 import com.areyoutalkingtome.model.RUReceiver;
 import com.areyoutalkingtome.repo.RUMessageRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.http.HttpEntity;
 import org.springframework.scheduling.annotation.EnableScheduling;
 import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
 import java.util.logging.Logger;
 
 /**
@@ -19,15 +22,13 @@ import java.util.logging.Logger;
 @EnableScheduling
 public class MessageService {
 
-    @Value("${send.to.address}")
-    private String sendToAddress;
+    private static Logger log = Logger.getLogger(MessageService.class.getName());
+
+    @Autowired
+    RESTClient restClient;
+
     @Value("${receiver.name}")
     private String receiverName;
-    @Value("${origin.name}")
-    private String origin;
-    @Value("${message.content}")
-    private String body;
-    private static Logger log = Logger.getLogger(MessageService.class.getName());
 
     @Autowired
     RUMessageRepository messageRepository;
@@ -42,14 +43,18 @@ public class MessageService {
         message.add(new RUReceiver(receiverName, message));
     }
 
-    private void doSend() {
-        RUMessage message = new RUMessage(origin, body);
-    }
-
-
     @Scheduled(fixedDelay=6000)
-    private void scheduleRun() {
-        System.out.println("I've just run !");
-        doSend();
+    public void scheduleRun() {
+        // get all messages
+        List<RUMessage> messages = (List<RUMessage>) messageRepository.findAll();
+        // for each
+        for (RUMessage message : messages) {
+            restClient.sendMessage(message);
+        }
+
+            // send with restclient
+            // if success
+                // delete
     }
+
 }
