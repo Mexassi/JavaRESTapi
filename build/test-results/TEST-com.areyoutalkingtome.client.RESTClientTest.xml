@@ -1,13 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.areyoutalkingtome.client.RESTClientTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2016-03-30T02:37:13" hostname="awesome" time="0.74">
+<testsuite name="com.areyoutalkingtome.client.RESTClientTest" tests="1" skipped="1" failures="0" errors="0" timestamp="2016-03-30T21:38:48" hostname="awesome" time="0.006">
   <properties/>
-  <testcase name="sendMessage" classname="com.areyoutalkingtome.client.RESTClientTest" time="0.74"/>
-  <system-out><![CDATA[Sending message
-13:37:14.350 [Test worker] DEBUG o.s.web.client.RestTemplate - Created POST request for "http://localhost:2016/inbound"
-13:37:14.453 [Test worker] DEBUG o.s.web.client.RestTemplate - Setting request Accept header to [application/json, application/*+json]
-13:37:14.476 [Test worker] DEBUG o.s.web.client.RestTemplate - Writing [RUMessage{id=0, origin='me', body='blah blha', timeSent=2016-03-30 13:37:13.833}] using [org.springframework.http.converter.json.MappingJackson2HttpMessageConverter@53469279]
-13:37:14.551 [Test worker] DEBUG o.s.web.client.RestTemplate - POST request for "http://localhost:2016/inbound" resulted in 201 (Created)
-13:37:14.553 [Test worker] DEBUG o.s.web.client.RestTemplate - Reading [class com.areyoutalkingtome.model.RUMessage] as "application/json;charset=UTF-8" using [org.springframework.http.converter.json.MappingJackson2HttpMessageConverter@53469279]
-]]></system-out>
+  <testcase name="sendMessage" classname="com.areyoutalkingtome.client.RESTClientTest" time="0.006">
+    <skipped/>
+  </testcase>
+  <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

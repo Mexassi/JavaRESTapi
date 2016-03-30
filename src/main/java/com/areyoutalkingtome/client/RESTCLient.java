@@ -4,12 +4,10 @@ import com.areyoutalkingtome.model.RUMessage;
 
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.HttpEntity;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Component;
 import org.springframework.web.client.RestTemplate;
 
-/**
- * Created by Massimo on 30/03/2016.
- */
 @Component
 public class RESTClient {
 
@@ -26,5 +24,11 @@ public class RESTClient {
         RestTemplate restTemplate = new RestTemplate();
         HttpEntity<RUMessage> messageHttpEntity = new HttpEntity<RUMessage>(message);
         restTemplate.postForObject(uri, messageHttpEntity, RUMessage.class);
+    }
+
+    public String getHealth(String uri) {
+        RestTemplate restTemplate = new RestTemplate();
+        ResponseEntity<String> response = restTemplate.getForEntity(uri, String.class);
+        return response.getBody();
     }
 }

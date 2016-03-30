@@ -23,7 +23,7 @@ public class RUReceiver {
     @ManyToOne
     private RUMessage message;
 
-    protected RUReceiver() {
+    public RUReceiver() {
 
     }
 

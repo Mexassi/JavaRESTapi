@@ -23,7 +23,7 @@
 <tr>
 <td>
 <div class="infoBox" id="tests">
-<div class="counter">0</div>
+<div class="counter">3</div>
 <p>tests</p>
 </div>
 </td>
@@ -41,7 +41,7 @@
 </td>
 <td>
 <div class="infoBox" id="duration">
-<div class="counter">-</div>
+<div class="counter">0.090s</div>
 <p>duration</p>
 </div>
 </td>
@@ -51,7 +51,7 @@
 </td>
 <td>
 <div class="infoBox success" id="successRate">
-<div class="percent">-</div>
+<div class="percent">100%</div>
 <p>successful</p>
 </div>
 </td>
@@ -77,23 +77,43 @@
 <th>Result</th>
 </tr>
 </thead>
+<tr>
+<td class="success">addReceiver</td>
+<td>0.017s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">saveMessage</td>
+<td>0.070s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">sendMessages</td>
+<td>0.003s</td>
+<td class="success">passed</td>
+</tr>
 </table>
 </div>
 <div id="tab1" class="tab">
 <h2>Standard output</h2>
 <span class="code">
-<pre>13:37:14.676 [Test worker] DEBUG o.s.t.c.j.SpringJUnit4ClassRunner - SpringJUnit4ClassRunner constructor called with [class com.areyoutalkingtome.service.MessageServiceTest]
-13:37:14.679 [Test worker] DEBUG o.s.test.context.BootstrapUtils - Instantiating CacheAwareContextLoaderDelegate from class [org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate]
-13:37:14.679 [Test worker] DEBUG o.s.test.context.BootstrapUtils - Instantiating BootstrapContext using constructor [public org.springframework.test.context.support.DefaultBootstrapContext(java.lang.Class,org.springframework.test.context.CacheAwareContextLoaderDelegate)]
-13:37:14.683 [Test worker] DEBUG o.s.test.context.BootstrapUtils - Instantiating TestContextBootstrapper for test class [com.areyoutalkingtome.service.MessageServiceTest] from class [org.springframework.test.context.web.WebTestContextBootstrapper]
-13:37:14.689 [Test worker] DEBUG o.s.t.c.w.WebTestContextBootstrapper - Found explicit ContextLoader class [org.springframework.boot.test.SpringApplicationContextLoader] for context configuration attributes [ContextConfigurationAttributes@2f2b925e declaringClass = 'com.areyoutalkingtome.service.MessageServiceTest', classes = '{class com.areyoutalkingtome.AreYouTalkingToMeApplication}', locations = '{}', inheritLocations = true, initializers = '{}', inheritInitializers = true, name = [null], contextLoaderClass = 'org.springframework.boot.test.SpringApplicationContextLoader']
-13:37:14.690 [Test worker] DEBUG o.s.t.c.s.AbstractContextLoader - Did not detect default resource location for test class [com.areyoutalkingtome.service.MessageServiceTest]: class path resource [com/areyoutalkingtome/service/MessageServiceTest-context.xml] does not exist
-13:37:14.692 [Test worker] DEBUG o.s.t.c.s.AbstractContextLoader - Did not detect default resource location for test class [com.areyoutalkingtome.service.MessageServiceTest]: class path resource [com/areyoutalkingtome/service/MessageServiceTestContext.groovy] does not exist
-13:37:14.694 [Test worker] INFO  o.s.t.c.s.AbstractContextLoader - Could not detect default resource locations for test class [com.areyoutalkingtome.service.MessageServiceTest]: no resource found for suffixes {-context.xml, Context.groovy}.
-13:37:14.697 [Test worker] DEBUG o.s.t.c.support.ActiveProfilesUtils - Could not find an 'annotation declaring class' for annotation type [org.springframework.test.context.ActiveProfiles] and class [com.areyoutalkingtome.service.MessageServiceTest]
-13:37:14.698 [Test worker] DEBUG o.s.t.c.w.WebTestContextBootstrapper - @TestExecutionListeners is not present for class [com.areyoutalkingtome.service.MessageServiceTest]: using defaults.
-13:37:14.704 [Test worker] INFO  o.s.t.c.w.WebTestContextBootstrapper - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
-13:37:14.705 [Test worker] INFO  o.s.t.c.w.WebTestContextBootstrapper - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@48fadd41, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@1bfe4b8e, org.springframework.test.context.support.DependencyInjectionTestExecutionListener@1905188, org.springframework.test.context.support.DirtiesContextTestExecutionListener@65efd240, org.springframework.test.context.transaction.TransactionalTestExecutionListener@7be10b69, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@12aa8da0]
+<pre>2016-03-31 08:40:04.536  INFO 1723 --- [    Test worker] o.s.t.c.support.AbstractContextLoader    : Could not detect default resource locations for test class [com.areyoutalkingtome.service.MessageServiceTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+2016-03-31 08:40:04.539  INFO 1723 --- [    Test worker] o.s.t.c.web.WebTestContextBootstrapper   : Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+2016-03-31 08:40:04.540  INFO 1723 --- [    Test worker] o.s.t.c.web.WebTestContextBootstrapper   : Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@281749a5, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@a50ff68, org.springframework.test.context.support.DependencyInjectionTestExecutionListener@202c1e75, org.springframework.test.context.support.DirtiesContextTestExecutionListener@514745ea, org.springframework.test.context.transaction.TransactionalTestExecutionListener@438f6406, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@4e2978a0]
+2016-03-31 08:40:04.559  INFO 1723 --- [    Test worker] o.s.t.c.transaction.TransactionContext   : Began transaction (1) for test context [DefaultTestContext@65b5749f testClass = MessageServiceTest, testInstance = com.areyoutalkingtome.service.MessageServiceTest@5d22837b, testMethod = addReceiver@MessageServiceTest, testException = [null], mergedContextConfiguration = [WebMergedContextConfiguration@e3618a6 testClass = MessageServiceTest, locations = '{}', classes = '{class com.areyoutalkingtome.AreYouTalkingToMeApplication}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{}', resourceBasePath = 'src/main/webapp', contextLoader = 'org.springframework.boot.test.SpringApplicationContextLoader', parent = [null]]]; transaction manager [org.springframework.orm.jpa.JpaTransactionManager@11fa74f3]; rollback [true]
+2016-03-31 08:40:04.567  INFO 1723 --- [    Test worker] c.a.service.MessageService               : Saving message: RUMessage{id=0, origin='me', body='another message', timeSent=2016-03-31 08:40:04.56}
+Saving message: RUMessage{id=0, origin='me', body='another message', timeSent=2016-03-31 08:40:04.56}
+Hibernate: insert into rumessage (body, origin, time_sent) values (?, ?, ?)
+Hibernate: insert into rureceiver (message_id, name, time) values (?, ?, ?)
+2016-03-31 08:40:04.574  INFO 1723 --- [    Test worker] o.s.t.c.transaction.TransactionContext   : Rolled back transaction for test context [DefaultTestContext@65b5749f testClass = MessageServiceTest, testInstance = com.areyoutalkingtome.service.MessageServiceTest@5d22837b, testMethod = addReceiver@MessageServiceTest, testException = [null], mergedContextConfiguration = [WebMergedContextConfiguration@e3618a6 testClass = MessageServiceTest, locations = '{}', classes = '{class com.areyoutalkingtome.AreYouTalkingToMeApplication}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{}', resourceBasePath = 'src/main/webapp', contextLoader = 'org.springframework.boot.test.SpringApplicationContextLoader', parent = [null]]].
+2016-03-31 08:40:04.576  INFO 1723 --- [    Test worker] o.s.t.c.transaction.TransactionContext   : Began transaction (1) for test context [DefaultTestContext@65b5749f testClass = MessageServiceTest, testInstance = com.areyoutalkingtome.service.MessageServiceTest@4355dc79, testMethod = sendMessages@MessageServiceTest, testException = [null], mergedContextConfiguration = [WebMergedContextConfiguration@e3618a6 testClass = MessageServiceTest, locations = '{}', classes = '{class com.areyoutalkingtome.AreYouTalkingToMeApplication}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{}', resourceBasePath = 'src/main/webapp', contextLoader = 'org.springframework.boot.test.SpringApplicationContextLoader', parent = [null]]]; transaction manager [org.springframework.orm.jpa.JpaTransactionManager@11fa74f3]; rollback [true]
+2016-03-31 08:40:04.578  INFO 1723 --- [    Test worker] o.s.t.c.transaction.TransactionContext   : Rolled back transaction for test context [DefaultTestContext@65b5749f testClass = MessageServiceTest, testInstance = com.areyoutalkingtome.service.MessageServiceTest@4355dc79, testMethod = sendMessages@MessageServiceTest, testException = [null], mergedContextConfiguration = [WebMergedContextConfiguration@e3618a6 testClass = MessageServiceTest, locations = '{}', classes = '{class com.areyoutalkingtome.AreYouTalkingToMeApplication}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{}', resourceBasePath = 'src/main/webapp', contextLoader = 'org.springframework.boot.test.SpringApplicationContextLoader', parent = [null]]].
+2016-03-31 08:40:04.591  INFO 1723 --- [    Test worker] o.s.t.c.transaction.TransactionContext   : Began transaction (1) for test context [DefaultTestContext@65b5749f testClass = MessageServiceTest, testInstance = com.areyoutalkingtome.service.MessageServiceTest@1a602d14, testMethod = saveMessage@MessageServiceTest, testException = [null], mergedContextConfiguration = [WebMergedContextConfiguration@e3618a6 testClass = MessageServiceTest, locations = '{}', classes = '{class com.areyoutalkingtome.AreYouTalkingToMeApplication}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{}', resourceBasePath = 'src/main/webapp', contextLoader = 'org.springframework.boot.test.SpringApplicationContextLoader', parent = [null]]]; transaction manager [org.springframework.orm.jpa.JpaTransactionManager@11fa74f3]; rollback [true]
+2016-03-31 08:40:04.593  INFO 1723 --- [    Test worker] c.a.service.MessageService               : Saving message: RUMessage{id=0, origin='me', body='message sample', timeSent=2016-03-31 08:40:04.593}
+Saving message: RUMessage{id=0, origin='me', body='message sample', timeSent=2016-03-31 08:40:04.593}
+Hibernate: insert into rumessage (body, origin, time_sent) values (?, ?, ?)
+Hibernate: insert into rureceiver (message_id, name, time) values (?, ?, ?)
+2016-03-31 08:40:04.642  INFO 1723 --- [    Test worker] o.s.t.c.transaction.TransactionContext   : Rolled back transaction for test context [DefaultTestContext@65b5749f testClass = MessageServiceTest, testInstance = com.areyoutalkingtome.service.MessageServiceTest@1a602d14, testMethod = saveMessage@MessageServiceTest, testException = [null], mergedContextConfiguration = [WebMergedContextConfiguration@e3618a6 testClass = MessageServiceTest, locations = '{}', classes = '{class com.areyoutalkingtome.AreYouTalkingToMeApplication}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{}', resourceBasePath = 'src/main/webapp', contextLoader = 'org.springframework.boot.test.SpringApplicationContextLoader', parent = [null]]].
 </pre>
 </span>
 </div>
@@ -105,7 +125,7 @@
 <input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
 </label>
 </div>Generated by 
-<a href="http://www.gradle.org">Gradle 2.9</a> at Mar 30, 2016 1:37:14 PM</p>
+<a href="http://www.gradle.org">Gradle 2.9</a> at Mar 31, 2016 8:40:04 AM</p>
 </div>
 </div>
 </body>

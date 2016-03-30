@@ -28,7 +28,7 @@ public class RUMessage {
     private List<RUReceiver> receivers;
 
     public RUMessage() {
-        this.receivers = new ArrayList<RUReceiver>();
+//        this.receivers = new ArrayList<RUReceiver>();
     }
 
     public RUMessage(String origin, String body) {
@@ -88,7 +88,7 @@ public class RUMessage {
                 '}';
     }
 
-    public void add(RUReceiver receiver) {
+    public void addReceiver(RUReceiver receiver) {
         receivers.add(receiver);
     }
 }

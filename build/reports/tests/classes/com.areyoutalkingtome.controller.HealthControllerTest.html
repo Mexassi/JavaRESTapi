@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta http-equiv="x-ua-compatible" content="IE=edge"/>
+<title>Test results - Class com.areyoutalkingtome.controller.HealthControllerTest</title>
+<link href="../css/base-style.css" rel="stylesheet" type="text/css"/>
+<link href="../css/style.css" rel="stylesheet" type="text/css"/>
+<script src="../js/report.js" type="text/javascript"></script>
+</head>
+<body>
+<div id="content">
+<h1>Class com.areyoutalkingtome.controller.HealthControllerTest</h1>
+<div class="breadcrumbs">
+<a href="../index.html">all</a> &gt; 
+<a href="../packages/com.areyoutalkingtome.controller.html">com.areyoutalkingtome.controller</a> &gt; HealthControllerTest</div>
+<div id="summary">
+<table>
+<tr>
+<td>
+<div class="summaryGroup">
+<table>
+<tr>
+<td>
+<div class="infoBox" id="tests">
+<div class="counter">1</div>
+<p>tests</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="failures">
+<div class="counter">0</div>
+<p>failures</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="ignored">
+<div class="counter">0</div>
+<p>ignored</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="duration">
+<div class="counter">1m15.60s</div>
+<p>duration</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</td>
+<td>
+<div class="infoBox success" id="successRate">
+<div class="percent">100%</div>
+<p>successful</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div id="tabs">
+<ul class="tabLinks">
+<li>
+<a href="#tab0">Tests</a>
+</li>
+<li>
+<a href="#tab1">Standard output</a>
+</li>
+</ul>
+<div id="tab0" class="tab">
+<h2>Tests</h2>
+<table>
+<thead>
+<tr>
+<th>Test</th>
+<th>Duration</th>
+<th>Result</th>
+</tr>
+</thead>
+<tr>
+<td class="success">testInboundPostRequest</td>
+<td>1m15.60s</td>
+<td class="success">passed</td>
+</tr>
+</table>
+</div>
+<div id="tab1" class="tab">
+<h2>Standard output</h2>
+<span class="code">
+<pre>2016-03-31 08:38:48.467  INFO 1723 --- [    Test worker] o.s.t.c.support.AbstractContextLoader    : Could not detect default resource locations for test class [com.areyoutalkingtome.controller.HealthControllerTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+2016-03-31 08:38:48.475  INFO 1723 --- [    Test worker] o.s.t.c.web.WebTestContextBootstrapper   : Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+2016-03-31 08:38:48.477  INFO 1723 --- [    Test worker] o.s.t.c.web.WebTestContextBootstrapper   : Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@143530f1, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@754f6fa8, org.springframework.test.context.support.DependencyInjectionTestExecutionListener@1a1d6e09, org.springframework.test.context.support.DirtiesContextTestExecutionListener@55ec1e3, org.springframework.test.context.transaction.TransactionalTestExecutionListener@38d1cb01, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@366dd19c]
+2016-03-31 08:38:48.524  INFO 1723 --- [    Test worker] o.s.t.c.transaction.TransactionContext   : Began transaction (1) for test context [DefaultTestContext@34530cba testClass = HealthControllerTest, testInstance = com.areyoutalkingtome.controller.HealthControllerTest@26c50f2, testMethod = testInboundPostRequest@HealthControllerTest, testException = [null], mergedContextConfiguration = [WebMergedContextConfiguration@47f18c7e testClass = HealthControllerTest, locations = '{}', classes = '{class com.areyoutalkingtome.AreYouTalkingToMeApplication}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{}', resourceBasePath = 'src/main/webapp', contextLoader = 'org.springframework.boot.test.SpringApplicationContextLoader', parent = [null]]]; transaction manager [org.springframework.orm.jpa.JpaTransactionManager@11fa74f3]; rollback [true]
+2016-03-31 08:38:48.540  INFO 1723 --- [    Test worker] o.s.b.test.SpringBootMockServletContext  : Initializing Spring FrameworkServlet ''
+2016-03-31 08:38:48.540  INFO 1723 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : FrameworkServlet '': initialization started
+2016-03-31 08:38:48.567  INFO 1723 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : FrameworkServlet '': initialization completed in 27 ms
+Hibernate: select rumessage0_.id as id1_0_, rumessage0_.body as body2_0_, rumessage0_.origin as origin3_0_, rumessage0_.time_sent as time_sen4_0_ from rumessage rumessage0_
+Hibernate: insert into rumessage (body, origin, time_sent) values (?, ?, ?)
+Hibernate: select rumessage0_.id as id1_0_, rumessage0_.body as body2_0_, rumessage0_.origin as origin3_0_, rumessage0_.time_sent as time_sen4_0_ from rumessage rumessage0_
+Hibernate: select rumessage0_.id as id1_0_, rumessage0_.body as body2_0_, rumessage0_.origin as origin3_0_, rumessage0_.time_sent as time_sen4_0_ from rumessage rumessage0_
+Hibernate: select rumessage0_.id as id1_0_, rumessage0_.body as body2_0_, rumessage0_.origin as origin3_0_, rumessage0_.time_sent as time_sen4_0_ from rumessage rumessage0_
+2016-03-31 08:40:04.113  INFO 1723 --- [    Test worker] o.s.t.c.transaction.TransactionContext   : Rolled back transaction for test context [DefaultTestContext@34530cba testClass = HealthControllerTest, testInstance = com.areyoutalkingtome.controller.HealthControllerTest@26c50f2, testMethod = testInboundPostRequest@HealthControllerTest, testException = [null], mergedContextConfiguration = [WebMergedContextConfiguration@47f18c7e testClass = HealthControllerTest, locations = '{}', classes = '{class com.areyoutalkingtome.AreYouTalkingToMeApplication}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{}', resourceBasePath = 'src/main/webapp', contextLoader = 'org.springframework.boot.test.SpringApplicationContextLoader', parent = [null]]].
+</pre>
+</span>
+</div>
+</div>
+<div id="footer">
+<p>
+<div>
+<label class="hidden" id="label-for-line-wrapping-toggle" for="line-wrapping-toggle">Wrap lines
+<input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
+</label>
+</div>Generated by 
+<a href="http://www.gradle.org">Gradle 2.9</a> at Mar 31, 2016 8:40:04 AM</p>
+</div>
+</div>
+</body>
+</html>

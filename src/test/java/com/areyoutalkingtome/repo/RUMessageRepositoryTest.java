@@ -27,7 +27,7 @@ public class RUMessageRepositoryTest {
     @Test
     public void testSaveWithReceiver() throws Exception {
         RUMessage message = new RUMessage("Massimo", "good luck testing it!");
-        message.add(new RUReceiver("somebody", message));
+        message.addReceiver(new RUReceiver("somebody", message));
         RUMessage saved = messageRepository.save(message);
         RUMessage inserted = messageRepository.findOne(saved.getId());
         assertThat("should have the same origin", saved.getOrigin(), equalTo(inserted.getOrigin()));

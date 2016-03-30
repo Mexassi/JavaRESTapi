@@ -1,6 +1,5 @@
 package com.areyoutalkingtome.controller;
 
-import com.areyoutalkingtome.client.RESTClient;
 import com.areyoutalkingtome.model.RUMessage;
 import com.areyoutalkingtome.service.MessageService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -20,6 +19,11 @@ public class RUController {
     @RequestMapping(value = "/inbound", method = RequestMethod.POST)
     public ResponseEntity<RUMessage> createMessage(@RequestBody RUMessage message) {
         return new ResponseEntity<RUMessage>(messageService.save(message), HttpStatus.CREATED);
+    }
+
+    @RequestMapping(value = "/inbound", method = RequestMethod.GET)
+    public Iterable<RUMessage> getMessages() {
+        return messageService.getAllMessages();
     }
 
 }
