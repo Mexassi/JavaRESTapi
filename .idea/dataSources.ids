@@ -8,6 +8,52 @@
     <case-sensitivity plain-identifiers="mixed" quoted-identifiers="upper"/>
     <database-model serializer="dbm" rdbms="MYSQL" format-version="2.4">
       <schema id="1" name="areyoutalkingtome"/>
+      <table id="2" parent="1" name="rumessage"/>
+      <table id="3" parent="1" name="rureceiver"/>
+      <column id="4" parent="2" name="id">
+        <mandatory>1</mandatory>
+        <data-type>bigint(20)</data-type>
+      </column>
+      <column id="5" parent="2" name="body">
+        <data-type>varchar(255)</data-type>
+      </column>
+      <column id="6" parent="2" name="origin">
+        <data-type>varchar(255)</data-type>
+      </column>
+      <column id="7" parent="2" name="time_sent">
+        <data-type>datetime</data-type>
+      </column>
+      <key id="8" parent="2" name="PRIMARY">
+        <columns>id</columns>
+        <primary>1</primary>
+      </key>
+      <column id="9" parent="3" name="id">
+        <mandatory>1</mandatory>
+        <data-type>bigint(20)</data-type>
+      </column>
+      <column id="10" parent="3" name="name">
+        <data-type>varchar(255)</data-type>
+      </column>
+      <column id="11" parent="3" name="time">
+        <data-type>datetime</data-type>
+      </column>
+      <column id="12" parent="3" name="message_id">
+        <data-type>bigint(20)</data-type>
+      </column>
+      <index id="13" parent="3" name="FK_cior821et8bt629lwytq42rgd">
+        <columns>message_id</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <key id="14" parent="3" name="PRIMARY">
+        <columns>id</columns>
+        <primary>1</primary>
+      </key>
+      <foreign-key id="15" parent="3" name="FK_cior821et8bt629lwytq42rgd">
+        <columns>message_id</columns>
+        <ref-key>~.rumessage.PRIMARY</ref-key>
+        <cascade-update-rule>restrict</cascade-update-rule>
+        <cascade-delete-rule>restrict</cascade-delete-rule>
+      </foreign-key>
     </database-model>
   </data-source>
 </component>
