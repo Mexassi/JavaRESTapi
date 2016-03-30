@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta http-equiv="x-ua-compatible" content="IE=edge"/>
+<title>Test results - Class com.areyoutalkingtome.controller.RUControllerTest</title>
+<link href="../css/base-style.css" rel="stylesheet" type="text/css"/>
+<link href="../css/style.css" rel="stylesheet" type="text/css"/>
+<script src="../js/report.js" type="text/javascript"></script>
+</head>
+<body>
+<div id="content">
+<h1>Class com.areyoutalkingtome.controller.RUControllerTest</h1>
+<div class="breadcrumbs">
+<a href="../index.html">all</a> &gt; 
+<a href="../packages/com.areyoutalkingtome.controller.html">com.areyoutalkingtome.controller</a> &gt; RUControllerTest</div>
+<div id="summary">
+<table>
+<tr>
+<td>
+<div class="summaryGroup">
+<table>
+<tr>
+<td>
+<div class="infoBox" id="tests">
+<div class="counter">2</div>
+<p>tests</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="failures">
+<div class="counter">0</div>
+<p>failures</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="ignored">
+<div class="counter">0</div>
+<p>ignored</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="duration">
+<div class="counter">0.633s</div>
+<p>duration</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</td>
+<td>
+<div class="infoBox success" id="successRate">
+<div class="percent">100%</div>
+<p>successful</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div id="tabs">
+<ul class="tabLinks">
+<li>
+<a href="#tab0">Tests</a>
+</li>
+<li>
+<a href="#tab1">Standard output</a>
+</li>
+</ul>
+<div id="tab0" class="tab">
+<h2>Tests</h2>
+<table>
+<thead>
+<tr>
+<th>Test</th>
+<th>Duration</th>
+<th>Result</th>
+</tr>
+</thead>
+<tr>
+<td class="success">createMessage</td>
+<td>0.305s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">testInboundPostRequest</td>
+<td>0.328s</td>
+<td class="success">passed</td>
+</tr>
+</table>
+</div>
+<div id="tab1" class="tab">
+<h2>Standard output</h2>
+<span class="code">
+<pre>2016-03-30 12:05:23.969  INFO 10292 --- [    Test worker] o.s.t.c.support.AbstractContextLoader    : Could not detect default resource locations for test class [com.areyoutalkingtome.controller.RUControllerTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+2016-03-30 12:05:23.972  INFO 10292 --- [    Test worker] o.s.t.c.web.WebTestContextBootstrapper   : Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+2016-03-30 12:05:23.974  INFO 10292 --- [    Test worker] o.s.t.c.web.WebTestContextBootstrapper   : Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@705aa8bb, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@509fcc38, org.springframework.test.context.support.DependencyInjectionTestExecutionListener@1a43a37b, org.springframework.test.context.support.DirtiesContextTestExecutionListener@444a643e, org.springframework.test.context.transaction.TransactionalTestExecutionListener@61f0037c, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@4fa0ed76]
+2016-03-30 12:05:24.025  INFO 10292 --- [    Test worker] o.s.t.c.transaction.TransactionContext   : Began transaction (1) for test context [DefaultTestContext@5f032127 testClass = RUControllerTest, testInstance = com.areyoutalkingtome.controller.RUControllerTest@3e893258, testMethod = testInboundPostRequest@RUControllerTest, testException = [null], mergedContextConfiguration = [WebMergedContextConfiguration@487fc782 testClass = RUControllerTest, locations = '{}', classes = '{class com.areyoutalkingtome.AreYouTalkingToMeApplication}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{}', resourceBasePath = 'src/main/webapp', contextLoader = 'org.springframework.boot.test.SpringApplicationContextLoader', parent = [null]]]; transaction manager [org.springframework.orm.jpa.JpaTransactionManager@711409c8]; rollback [true]
+2016-03-30 12:05:24.033  INFO 10292 --- [    Test worker] o.s.b.test.SpringBootMockServletContext  : Initializing Spring FrameworkServlet ''
+2016-03-30 12:05:24.034  INFO 10292 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : FrameworkServlet '': initialization started
+2016-03-30 12:05:24.050  INFO 10292 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : FrameworkServlet '': initialization completed in 16 ms
+2016-03-30 12:05:24.211  INFO 10292 --- [    Test worker] c.a.service.MessageService               : Saving message: RUMessage{id=0, origin='a user', body='another message', timeSent=2016-03-30 12:05:24.052}
+Hibernate: insert into rumessage (body, origin, time_sent) values (?, ?, ?)
+Hibernate: insert into rureceiver (message_id, name, time) values (?, ?, ?)
+2016-03-30 12:05:24.336  INFO 10292 --- [    Test worker] o.s.t.c.transaction.TransactionContext   : Rolled back transaction for test context [DefaultTestContext@5f032127 testClass = RUControllerTest, testInstance = com.areyoutalkingtome.controller.RUControllerTest@3e893258, testMethod = testInboundPostRequest@RUControllerTest, testException = [null], mergedContextConfiguration = [WebMergedContextConfiguration@487fc782 testClass = RUControllerTest, locations = '{}', classes = '{class com.areyoutalkingtome.AreYouTalkingToMeApplication}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{}', resourceBasePath = 'src/main/webapp', contextLoader = 'org.springframework.boot.test.SpringApplicationContextLoader', parent = [null]]].
+2016-03-30 12:05:24.346  INFO 10292 --- [    Test worker] o.s.t.c.transaction.TransactionContext   : Began transaction (1) for test context [DefaultTestContext@5f032127 testClass = RUControllerTest, testInstance = com.areyoutalkingtome.controller.RUControllerTest@2a78211a, testMethod = createMessage@RUControllerTest, testException = [null], mergedContextConfiguration = [WebMergedContextConfiguration@487fc782 testClass = RUControllerTest, locations = '{}', classes = '{class com.areyoutalkingtome.AreYouTalkingToMeApplication}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{}', resourceBasePath = 'src/main/webapp', contextLoader = 'org.springframework.boot.test.SpringApplicationContextLoader', parent = [null]]]; transaction manager [org.springframework.orm.jpa.JpaTransactionManager@711409c8]; rollback [true]
+2016-03-30 12:05:24.351  INFO 10292 --- [    Test worker] o.s.b.test.SpringBootMockServletContext  : Initializing Spring FrameworkServlet ''
+2016-03-30 12:05:24.351  INFO 10292 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : FrameworkServlet '': initialization started
+2016-03-30 12:05:24.359  INFO 10292 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : FrameworkServlet '': initialization completed in 7 ms
+Hibernate: select count(*) as col_0_0_ from rumessage rumessage0_
+2016-03-30 12:05:24.617  INFO 10292 --- [    Test worker] c.a.service.MessageService               : Saving message: RUMessage{id=0, origin='Massimo', body='this is a test message', timeSent=2016-03-30 12:05:24.362}
+Hibernate: insert into rumessage (body, origin, time_sent) values (?, ?, ?)
+Hibernate: insert into rureceiver (message_id, name, time) values (?, ?, ?)
+Hibernate: select count(*) as col_0_0_ from rumessage rumessage0_
+2016-03-30 12:05:24.645  INFO 10292 --- [    Test worker] o.s.t.c.transaction.TransactionContext   : Rolled back transaction for test context [DefaultTestContext@5f032127 testClass = RUControllerTest, testInstance = com.areyoutalkingtome.controller.RUControllerTest@2a78211a, testMethod = createMessage@RUControllerTest, testException = [null], mergedContextConfiguration = [WebMergedContextConfiguration@487fc782 testClass = RUControllerTest, locations = '{}', classes = '{class com.areyoutalkingtome.AreYouTalkingToMeApplication}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{}', resourceBasePath = 'src/main/webapp', contextLoader = 'org.springframework.boot.test.SpringApplicationContextLoader', parent = [null]]].
+</pre>
+</span>
+</div>
+</div>
+<div id="footer">
+<p>
+<div>
+<label class="hidden" id="label-for-line-wrapping-toggle" for="line-wrapping-toggle">Wrap lines
+<input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
+</label>
+</div>Generated by 
+<a href="http://www.gradle.org">Gradle 2.9</a> at Mar 30, 2016 12:05:24 PM</p>
+</div>
+</div>
+</body>
+</html>
